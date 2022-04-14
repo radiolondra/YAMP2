@@ -1,0 +1,136 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:YAMP2.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="YAMP2.Views.MainWindow"
+		xmlns:views="clr-namespace:YAMP2.Views;assembly=YAMP2"
+        Icon="/Assets/Y.ico"
+		Width="900" Height="600"
+		WindowStartupLocation="CenterScreen"
+        TransparencyLevelHint="None"
+        ExtendClientAreaTitleBarHeightHint="999"
+        Background="{x:Null}"
+		CanResize="False"
+        FontFamily="avares://YAMP2/Assets/Fonts#Lato"
+        ExtendClientAreaChromeHints="PreferSystemChrome"
+        ExtendClientAreaToDecorationsHint="True"
+        Title="YAMP2">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+	<Window.Styles>
+		<Style Selector="PathIcon.ButtonIcon:pointerover">
+			<Setter Property="Foreground" Value="Yellow"/>
+		</Style>
+
+		<Style Selector="Button:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+			<Setter Property="Background" Value="Transparent" />
+			<Setter Property="InputElement.Cursor" Value="Hand"/>
+			<Setter Property="TextBlock.Foreground" Value="Yellow"/>
+			<Setter Property="BorderBrush" Value="Transparent"/>
+		</Style>
+
+		<Style Selector="Button.PlayButton:pointerover /template/ ContentPresenter">
+			<Setter Property="BorderBrush" Value="Transparent"/>
+			<Setter Property="BorderThickness" Value="0"/>
+			<Setter Property="Background" Value="Transparent"/>
+		</Style>
+	</Window.Styles>
+
+
+
+	<Grid RowDefinitions="Auto,*" ColumnDefinitions="*">
+		<StackPanel Margin="10" Spacing="8" Grid.Row="0">
+
+			<TextBlock
+				Text="YAMP - Yet Another Media Player"
+				HorizontalAlignment="Center"
+				FontSize="24"/>
+			<TextBlock
+				Text="YAMP is an Open Source Media Player built with LibVLC and Avalonia"
+				HorizontalAlignment="Center"
+				FontSize="12"/>
+
+			<Grid ColumnDefinitions="Auto,*,Auto,Auto"
+				RowDefinitions="Auto,Auto"
+				Margin="10">
+				<Label 
+					Content="Play this Media"
+					Grid.Column="0"/>
+				<TextBox 
+					Grid.ColumnSpan="2"
+					Grid.Row="1"
+					Name="FolderBox"
+					Text="{Binding MediaFile}"
+					VerticalContentAlignment="Center"
+					Watermark="Choose a local media file or paste the link to a remote media to be played (Youtube and others websites links are welcome)"/>
+				<Button 
+					Name="SelectFolder"
+					Width="30"
+					Background="Transparent"
+					Margin="10,0,0,0"
+					Grid.Column="2"
+					Grid.Row="1"
+					ToolTip.Tip="Choose a media file"
+					VerticalAlignment="Center"
+					Command="{Binding SelectFile}">
+					<PathIcon Height="30"
+							  Width="30"
+							  Classes="ButtonIcon"
+							  Data="{StaticResource folder_open_regular}" />
+				</Button>
+
+				<Button
+					Content="Play"
+					Classes="PlayButton"
+					Margin="10,0,0,0"
+					Grid.Column="3"
+					Grid.Row="1"
+					HorizontalAlignment="Center"
+					Background="WhiteSmoke"
+					Foreground="Blue"
+					IsDefault="True"
+					Command="{Binding CallOpenPlayer}"/>
+
+				
+			</Grid>
+
+		</StackPanel>
+
+		
+		<views:VideoPlayerViewControl
+				Margin="0,5,0,0"					
+				Grid.Row="1"	
+				Name="Player"/>
+		
+
+		<Panel ZIndex="2" Grid.Row="0"
+			IsVisible="{Binding IsLoading}"
+			Background="Black"
+			VerticalAlignment="Stretch"
+			Opacity="0.6"
+			HorizontalAlignment="Stretch">
+
+			<Grid ColumnDefinitions="Auto" RowDefinitions="Auto"
+				  HorizontalAlignment="Center" VerticalAlignment="Center">
+
+				<views:Spinner Grid.Column="0" Grid.Row="0"/>
+			</Grid>
+		</Panel>
+	</Grid>
+
+</Window>
+<!--
+WindowStartupLocation="CenterScreen"
+        TransparencyLevelHint="None"
+        ExtendClientAreaTitleBarHeightHint="999"
+        Background="{x:Null}"
+		CanResize="False"
+        FontFamily="avares://YAMP2/Assets/Fonts#Lato"
+        ExtendClientAreaChromeHints="PreferSystemChrome"
+        ExtendClientAreaToDecorationsHint="True"
+-->

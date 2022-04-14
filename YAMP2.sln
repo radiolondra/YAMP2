@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32407.337
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YAMP2", "YAMP2\YAMP2.csproj", "{BC7EB296-9137-45A3-8C1E-F1E8ABBA66DB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{90C20EF5-EA1F-49FD-903B-E5DEB2350D9B} = {90C20EF5-EA1F-49FD-903B-E5DEB2350D9B}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibVLCSharp.Avalonia", "LibVLCSharp.Avalonia\LibVLCSharp.Avalonia.csproj", "{90C20EF5-EA1F-49FD-903B-E5DEB2350D9B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC7EB296-9137-45A3-8C1E-F1E8ABBA66DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC7EB296-9137-45A3-8C1E-F1E8ABBA66DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC7EB296-9137-45A3-8C1E-F1E8ABBA66DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC7EB296-9137-45A3-8C1E-F1E8ABBA66DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90C20EF5-EA1F-49FD-903B-E5DEB2350D9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90C20EF5-EA1F-49FD-903B-E5DEB2350D9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90C20EF5-EA1F-49FD-903B-E5DEB2350D9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90C20EF5-EA1F-49FD-903B-E5DEB2350D9B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EF15DFC4-DA55-47DA-A45E-C3AE675C1C94}
+	EndGlobalSection
+EndGlobal

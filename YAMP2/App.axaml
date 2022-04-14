@@ -1,0 +1,16 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:YAMP2"
+             x:Class="YAMP2.App">
+    <Application.DataTemplates>
+        <local:ViewLocator/>
+    </Application.DataTemplates>
+
+    <Application.Styles>
+		<FluentTheme Mode="Dark"/>
+		<StyleInclude Source="avares://YAMP2/Assets/Icons.axaml"/>
+		<StyleInclude Source="avares://YAMP2/Assets/Styles.xaml" />
+		<StyleInclude Source="avares://YAMP2/Controls/FlyoutPanel.axaml"/>
+		<StyleInclude Source="avares://AvaloniaProgressRing/Styles/ProgressRing.xaml"/>
+    </Application.Styles>
+</Application>
