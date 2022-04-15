@@ -23,3 +23,11 @@ The code of **YAMP2** was written in a few hours and... <u>badly</u>, for sure. 
 ##### Build YAMP2
 
 Just clone the repo, open the YAMP2 solution in VS2019, build and run it. Enjoy.
+
+##### Some reference links
+
+[c# - AvaloniaUI: Cannot embed VideoView control (LibVlcSharp) in a UserControl - Stack Overflow](https://stackoverflow.com/a/71696308/4973374)
+
+[Video Player · Issue #2571 · AvaloniaUI/Avalonia · GitHub](https://github.com/AvaloniaUI/Avalonia/issues/2571#issuecomment-1084671987)
+
+[Add support for NativeControlHost inside a UserControl · Issue #6237 · AvaloniaUI/Avalonia · GitHub](https://github.com/AvaloniaUI/Avalonia/issues/6237#issuecomment-1084914382)
