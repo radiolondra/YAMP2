@@ -2,7 +2,7 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using YAMP2.ViewModels;
-using LibVLCSharp.Avalonia;
+using LibVLCSharp.Avalonia.Unofficial;
 
 namespace YAMP2.Views
 {

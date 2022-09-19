@@ -47,7 +47,7 @@
 		<StackPanel Margin="10" Spacing="8" Grid.Row="0">
 
 			<TextBlock
-				Text="YAMP - Yet Another Media Player"
+				Text="YAMP 2- Yet Another Media Player"
 				HorizontalAlignment="Center"
 				FontSize="24"/>
 			<TextBlock

@@ -85,7 +85,7 @@ namespace YAMP2.Utils
         };
         */
 
-        public static string[] LibVlc_AdditionalOptions = { };
+        public static string[] LibVlc_AdditionalOptions = { "--directx-use-sysmem", "--network-caching=4000" };
 
         /// <summary>
         /// Additional options to create Media instance
