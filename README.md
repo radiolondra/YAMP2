@@ -4,6 +4,10 @@
 
 ###### Made with Avalonia and my new Unofficial LibVLCSharp.Avalonia library
 
+##### Sample Video
+
+[Watch YAMP 2 in action](https://www.screencast.com/t/uTGBnpE6v)
+
 The official distribution of the *Videolan LibVLCSharp library for Avalonia* is, at present, incomplete and, to say the least, disappointing.
 
 The list of shortcomings of that official distribution is certainly very long, but its, let's call them, *basic problems* are:
